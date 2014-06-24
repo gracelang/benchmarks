@@ -66,13 +66,12 @@ for (minDepth .. maxDepth) doWithBreak { i, break ->
   check := 0
 
   for (1..iterations) do { j ->
-    check := check + bottomUpTree(j, depth).itemCheck()
-    check := check + bottomUpTree(-j, depth).itemCheck()
+    check := check + bottomUpTree(j, depth).itemCheck
+    check := check + bottomUpTree(-j, depth).itemCheck
   }
 
   print "{iterations*2}\t trees of depth {depth}\t check: {check}"
 }
 
 print("long lived tree of depth {maxDepth}" ++
-  "\t check: {longLivedTree.itemCheck()}")
-
+  "\t check: {longLivedTree.itemCheck}")
